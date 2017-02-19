@@ -6,8 +6,20 @@ var app = express();
 app.use(morgan('combined'));
 
 var content = {
-    title
-}
+    title: 'A1'
+    heading: 'Shekhar A1'
+    date: 'Apr 27, 1994'
+    content: `<p>
+             THis is the content for my first article.  
+          </p>
+       <p>
+           I hate to write HTML code.
+          </p>
+       <p>
+            To make a webapp i must have to use HTML so here it is<br>
+           my first WEBAPP
+          </p>`
+};
 
 app.get('/', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'index.html'));
