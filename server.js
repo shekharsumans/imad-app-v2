@@ -4,8 +4,43 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+function ctemp(data){
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
 
-var content = {
+var htmlmain =`
+<html>
+  <head>
+             <title> ${title }</title>
+    <meta name="viewport" content="width=device-width, initiak-scalev=1" />
+      <link href="/ui/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+        <div style="color: #0b0b9e;">
+      <div>
+      <a href= "/">Home</a>
+      </div>
+     <hr/>
+          <h3> ${heading} </h3>
+      <div>
+          ${date}
+       </div>
+
+       <div>
+          ${content}
+       </div>
+       </div>
+  </div>
+  </body>
+</html> 
+`;
+return htmlmain;
+}
+var articleOne = {
     title: 'A1',
     heading: 'Shekhar A1',
     date: 'Apr 27, 1994',
@@ -29,7 +64,7 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 app.get('/article-one',function(req,res){
-    res.sendFile(path.join(__dirname, '', 'article-one.html'));
+    res.send(ctemp(articleOne));
 });
 
 app.get('/article-two',function(req,res){
@@ -37,7 +72,7 @@ app.get('/article-two',function(req,res){
 });
 
 app.get('/article-three',function(req,res){
-    res.sendFile(path.join(__dirname, '', 'article-three.html'));
+    res.send(ctemp(__dirname, '', 'article-three.html'));
 });
 
 app.get('/ui/madi.png', function (req,res){
