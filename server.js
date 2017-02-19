@@ -40,8 +40,8 @@ var htmlmain =`
 `;
 return htmlmain;
 }
-var articles = {
-  var articleOne = {
+var articles =  {
+   articleOne: {
     title: 'A1',
     heading: 'Shekhar A1',
     date: 'Apr 27, 1994',
@@ -56,7 +56,7 @@ var articles = {
            my first WEBAPP
           </p>`
 }, 
- var articleTwo = {
+   articleTwo :{
     title: 'A2',
     heading: 'Shekhar A2',
     date: 'Oct 01, 1994',
@@ -71,7 +71,7 @@ var articles = {
            my first WEBAPP
           </p>`
 },
-var articleThree = {
+   articleThree : {
     title: 'A3',
     heading: 'Shekhar A3',
     date: 'Dec 04, 1994',
