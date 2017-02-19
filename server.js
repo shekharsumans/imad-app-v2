@@ -40,7 +40,8 @@ var htmlmain =`
 `;
 return htmlmain;
 }
-var articleOne = {
+var articles = {
+  var articleOne = {
     title: 'A1',
     heading: 'Shekhar A1',
     date: 'Apr 27, 1994',
@@ -54,8 +55,38 @@ var articleOne = {
             To make a webapp i must have to use HTML so here it is<br>
            my first WEBAPP
           </p>`
+}, 
+ var articleTwo = {
+    title: 'A2',
+    heading: 'Shekhar A2',
+    date: 'Oct 01, 1994',
+    content: `<p>
+             THis is the content for my first article.  
+          </p>
+       <p>
+           I hate to write HTML code.
+          </p>
+       <p>
+            To make a webapp i must have to use HTML so here it is<br>
+           my first WEBAPP
+          </p>`
+},
+var articleThree = {
+    title: 'A3',
+    heading: 'Shekhar A3',
+    date: 'Dec 04, 1994',
+    content: `<p>
+             THis is the content for my first article.  
+          </p>
+       <p>
+           I hate to write HTML code.
+          </p>
+       <p>
+            To make a webapp i must have to use HTML so here it is<br>
+           my first WEBAPP
+          </p>`
+}
 };
-
 app.get('/', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -68,11 +99,11 @@ app.get('/article-one',function(req,res){
 });
 
 app.get('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname, '', 'article-two.html'));
+    res.send(ctemp(articleTwo));
 });
 
 app.get('/article-three',function(req,res){
-    res.send(ctemp(__dirname, '', 'article-three.html'));
+    res.send(ctemp(articleThree));
 });
 
 app.get('/ui/madi.png', function (req,res){
