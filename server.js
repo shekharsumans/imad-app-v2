@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles =  {
-  var  articleOne: {
+   articleOne: {
     title: 'A1',
     heading: 'Shekhar A1',
     date: 'Apr 27, 1994',
@@ -20,8 +20,8 @@ var articles =  {
             To make a webapp i must have to use HTML so here it is<br>
            my first WEBAPP
           </p>`
-}, 
-   articleTwo :{
+    }, 
+   articleTwo: {
     title: 'A2',
     heading: 'Shekhar A2',
     date: 'Oct 01, 1994',
@@ -35,8 +35,8 @@ var articles =  {
             To make a webapp i must have to use HTML so here it is<br>
            my first WEBAPP
           </p>`
-},
-   articleThree : {
+    },
+   articleThree: {
     title: 'A3',
     heading: 'Shekhar A3',
     date: 'Dec 04, 1994',
@@ -50,7 +50,7 @@ var articles =  {
             To make a webapp i must have to use HTML so here it is<br>
            my first WEBAPP
           </p>`
-}
+    }
 };
 function createTemplate(data){
     var title = data.title;
