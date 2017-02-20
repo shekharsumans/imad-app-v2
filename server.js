@@ -4,28 +4,27 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-function ctemp(data){
+function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
     var date = data.date;
     var content = data.content;
-
-var htmlmain =`
-<html>
-  <head>
-             <title> ${title }</title>
+    var htmlTemplate =`
+  <html>
+   <head>
+    <title> ${title }</title>
     <meta name="viewport" content="width=device-width, initiak-scalev=1" />
       <link href="/ui/style.css" rel="stylesheet" />
-  </head>
+   </head>
 
   <body>
     <div class="container">
-        <div style="color: #0b0b9e;">
       <div>
       <a href= "/">Home</a>
       </div>
      <hr/>
-          <h3> ${heading} </h3>
+          <h3> ${heading}
+          </h3>
       <div>
           ${date}
        </div>
@@ -33,12 +32,11 @@ var htmlmain =`
        <div>
           ${content}
        </div>
-       </div>
-  </div>
-  </body>
-</html> 
-`;
-return htmlmain;
+    </div>
+    </body>
+   </html> 
+   `;
+   return htmlTemplate;
 }
 var articles =  {
    articleOne: {
@@ -95,7 +93,7 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 app.get('/article-one',function(req,res){
-    res.send(ctemp(articleOne));
+    res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two',function(req,res){
