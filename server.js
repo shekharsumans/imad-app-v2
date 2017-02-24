@@ -73,7 +73,7 @@ function createTemplate(data){
      <hr/>
           <h3> ${heading}
           </h3>
-          <img src ="ui/abc.jpg" alt="Mountain View">
+          <img src ="ui/abc.jpg" alt="Mountain View" style="width:304px;height:228px;">
       <div>
           ${date}
        </div>
