@@ -107,11 +107,11 @@ app.get('/:articleName',function(req,res){
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
-app.get('/ui/:imageName.jpg',function(req,res){
+app.get('/ui/:imageName',function(req,res){
     //articleName ==article-one
     //articles[articleName] =={} content object for article one
     var imageName = req.params.imageName;
-    res.send(createTemplate(image[imageName.jpg]));
+    res.send(createTemplate(image[imageName]));
 });
 
 app.get('/ui/abc5.jpg', function (req,res){
