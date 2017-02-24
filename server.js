@@ -8,6 +8,7 @@ app.use(morgan('combined'));
 var articles =  {
    'article-one': {
     title: 'A1',
+    image: "abc.jpg",
     heading: 'Shekhar A1',
     date: 'Apr 27, 1994',
     content: `<p>
@@ -56,6 +57,7 @@ function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
     var date = data.date;
+    var image = data.image;
     var content = data.content;
     var htmlTemplate =`
     <html>
@@ -73,7 +75,7 @@ function createTemplate(data){
      <hr/>
           <h3> ${heading}
           </h3>
-          <img src ="ui/abc.jpg" alt="Mountain View" style="width:304px;height:228px;">
+          <img src =${image} style="width:304px;height:228px;">
       <div>
           ${date}
        </div>
