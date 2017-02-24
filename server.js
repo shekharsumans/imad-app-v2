@@ -8,9 +8,9 @@ app.use(morgan('combined'));
 var articles =  {
    'article-one': {
     title: 'A1',
-    image: `<img src = "abc.jpg" style="width:304px;height:228px;">`,
     heading: 'Shekhar A1',
     date: 'Apr 27, 1994',
+    image: '<img src = "abc.jpg" style="width:304px;height:228px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
@@ -82,6 +82,8 @@ function createTemplate(data){
 
        <div>
           ${image}
+          </div>
+      <div>
           ${content}
        </div>
      </div>
