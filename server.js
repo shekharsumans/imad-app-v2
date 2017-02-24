@@ -10,7 +10,7 @@ var articles =  {
     title: 'A1',
     heading: 'Shekhar A1',
     date: 'Apr 27, 1994',
-    image: '<img src = "ui/abc1.jpg" alt="View" style="width:258px;height:328px;">',
+    image: '<img src = "ui/abc2.jpg" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
@@ -26,7 +26,7 @@ var articles =  {
     title: 'A2',
     heading: 'Shekhar A2',
     date: 'Oct 01, 1994',
-    image: '<img src = "ui/abc2.jpg" alt="View" style="width:258px;height:328px;">',
+    image: '<img src = "ui/abc5.jpg" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
