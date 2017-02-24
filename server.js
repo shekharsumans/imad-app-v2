@@ -100,8 +100,8 @@ app.get('/:articleName',function(req,res){
     res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/', function (req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'IMG_20161029_164712369.jpg'));
+app.get('imad-app-v2/ui/IMG_20161029_164143250.jpg', function (req,res){
+  res.sendFile(path.join(__dirname, 'ui', 'IMG_20161029_164143250.jpg'));
 })
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
