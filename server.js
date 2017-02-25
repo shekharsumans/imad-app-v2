@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 var images = {
     img1 : "ui/abc2.jpg",
-    img2 : "ui/abc6.jpg",
+    img2 : '<img src = "ui/abc4.jpg", alt="View" style="width:258px;height:328px;">',
     img3 : "ui/abc4.jpg",
     img4 : "ui/abc5.jpg",
 };
@@ -31,7 +31,6 @@ var articles =  {
     title: 'A2',
     heading: 'Shekhar A2',
     date: 'Oct 01, 1994',
-    image: '<img src = "img2" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
@@ -115,12 +114,10 @@ app.get('/:articleName',function(req,res){
 app.get('/ui/abc4.jpg', function (req,res){
   res.sendFile(path.join(__dirname, 'ui', 'abc4.jpg'));
 })
-
-app.get('/ui/:imgName', function (req,res){
-     var imgName = req.params.imgName;
-  res.sendFile(path.join(__dirname, 'ui', images[imgName]));
-})
-
+app.get('/:imgName',function(req,res){
+    var imgName = req.params.imgName;
+    res.send(createTemplate(images[imgName]));
+});
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
