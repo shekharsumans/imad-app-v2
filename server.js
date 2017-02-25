@@ -5,16 +5,16 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var images = {
-    `img1`:{ 
+    'img1':{ 
         image: '<img src = "ui/abc1.jpg" alt="View" style="width:258px;height:328px;">'
     },
-    `img2`:{
+    'img2':{
         image: '<img src = "ui/abc5.jpg" alt="View" style="width:258px;height:328px;">'
     },
-    `img3`:{
+    'img3':{
         image: '<img src = "ui/abc2.jpg" alt="View" style="width:258px;height:328px;">',
     },
-    `img4`:{}
+    'img4':{}
 };
 var articles =  {
    'article-one': {
