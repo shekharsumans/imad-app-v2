@@ -12,7 +12,7 @@ var articles =  {
     title: 'A1',
     heading: 'Shekhar A1',
     date: 'Apr 27, 1994',
-    image: ''<img src = "img1" alt="View" style="width:258px;height:328px;">,
+    image: '<img src = "img1" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
