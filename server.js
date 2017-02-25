@@ -114,7 +114,7 @@ app.get('/:articleName',function(req,res){
 app.get('/ui/abc4.jpg', function (req,res){
   res.sendFile(path.join(__dirname, 'ui', 'abc4.jpg'));
 })
-app.get('/ui/abc4.jpg', function (req,res){
+app.get('/ui/abc:', function (req,res){
   res.sendFile(path.join(__dirname, 'ui', 'abc4.jpg,abc5.jpg'));
 })
 
