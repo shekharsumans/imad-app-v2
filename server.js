@@ -46,7 +46,7 @@ var articles =  {
     title: 'A3',
     heading: 'Shekhar A3',
     date: 'Dec 04, 1994',
-     image: '<img src = "img3" alt="View" style="width:258px;height:328px;">',
+     image: '<img src = "ui/abc4.jpg" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
@@ -113,9 +113,6 @@ app.get('/:articleName',function(req,res){
 });
 app.get('/ui/abc4.jpg', function (req,res){
   res.sendFile(path.join(__dirname, 'ui', 'abc4.jpg'));
-})
-app.get('/ui/abc:', function (req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'abc4.jpg,abc5.jpg'));
 })
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
