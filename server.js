@@ -4,13 +4,23 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
+var images = {
+    `img1`:{ 
+        image: '<img src = "ui/abc1.jpg" alt="View" style="width:258px;height:328px;">'
+    },
+    `img2`:{
+        image: '<img src = "ui/abc5.jpg" alt="View" style="width:258px;height:328px;">'
+    },
+    `img3`:{
+        image: '<img src = "ui/abc2.jpg" alt="View" style="width:258px;height:328px;">',
+    },
+    `img4`:{}
+};
 var articles =  {
    'article-one': {
     title: 'A1',
     heading: 'Shekhar A1',
     date: 'Apr 27, 1994',
-    image: '<img src = "ui/abc2.jpg" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
@@ -26,7 +36,6 @@ var articles =  {
     title: 'A2',
     heading: 'Shekhar A2',
     date: 'Oct 01, 1994',
-    image: '<img src = "ui/abc5.jpg" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
@@ -42,7 +51,6 @@ var articles =  {
     title: 'A3',
     heading: 'Shekhar A3',
     date: 'Dec 04, 1994',
-    image: '<img src = "ui/abc1.jpg" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
@@ -111,7 +119,7 @@ app.get('/ui/:imageName',function(req,res){
     //articleName ==article-one
     //articles[articleName] =={} content object for article one
     var imageName = req.params.imageName;
-    res.send(createTemplate(image[imageName]));
+    res.send(createTemplate(images[imageName]));
 });
 
 app.get('/ui/abc5.jpg', function (req,res){
