@@ -6,5 +6,5 @@ elemnt.innerHTML = 'suman shekhar';
 var img = document.getElementById('img1');
 
 img.onclick = function() {
-  img.style.marginleft = '100px';  
+  img.style.marginleft = '600px';  
 };
