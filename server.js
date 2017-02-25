@@ -114,7 +114,7 @@ app.get('/:articleName',function(req,res){
 app.get('/ui/abc4.jpg', function (req,res){
   res.sendFile(path.join(__dirname, 'ui', 'abc4.jpg'));
 })
-app.get('/:imgName',function(req,res){
+app.get('/ui:imgName',function(req,res){
     var imgName = req.params.imgName;
     res.send(createTemplate(images[imgName]));
 });
