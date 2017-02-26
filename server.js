@@ -26,6 +26,7 @@ var articles =  {
     title: 'A2',
     heading: 'Shekhar A2',
     date: 'Oct 01, 1994',
+    image: '<img src = "ui/abc5.jpg", alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
@@ -41,7 +42,7 @@ var articles =  {
     title: 'A3',
     heading: 'Shekhar A3',
     date: 'Dec 04, 1994',
-    image: '<img src = "ui/abc4.jpg" alt="View" style="width:258px;height:328px;">',
+    image: '<img src = "ui/abc6.jpg" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
@@ -109,8 +110,17 @@ app.get('/:articleName',function(req,res){
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
+app.get('/ui/abc2.jpg', function (req,res){
+  res.sendFile(path.join(__dirname, 'ui', 'abc2.jpg'));
+});
 app.get('/ui/abc4.jpg', function (req,res){
   res.sendFile(path.join(__dirname, 'ui', 'abc4.jpg'));
+});
+app.get('/ui/abc5.jpg', function (req,res){
+  res.sendFile(path.join(__dirname, 'ui', 'abc5.jpg'));
+});
+app.get('/ui/abc6.jpg', function (req,res){
+  res.sendFile(path.join(__dirname, 'ui', 'abc6.jpg'));
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
