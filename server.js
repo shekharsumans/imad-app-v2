@@ -4,12 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var images = {
-    img1 : "ui/abc2.jpg",
-    img2 : '<img src = "ui/abc4.jpg", alt="View" style="width:258px;height:328px;">',
-    img3 : "ui/abc4.jpg",
-    img4 : "ui/abc5.jpg",
-};
+
 var articles =  {
    'article-one': {
     title: 'A1',
@@ -46,7 +41,7 @@ var articles =  {
     title: 'A3',
     heading: 'Shekhar A3',
     date: 'Dec 04, 1994',
-     image: '<img src = "ui/abc4.jpg" alt="View" style="width:258px;height:328px;">',
+    image: '<img src = "ui/abc4.jpg" alt="View" style="width:258px;height:328px;">',
     content: `<p>
              THis is the content for my first article.  
           </p>
