@@ -4,7 +4,13 @@ var elemnt = document.getElementById('main-text');
 elemnt.innerHTML = 'suman shekhar';
 //move the image
 var img = document.getElementById('abc4');
+var marginLeft = 0;
+function moverRight() {
+    marginLeft = marginLeft + 1;
+    img.style.marginLeft = marginLeft + 'px';
+}
 
 img.onclick = function() {
-  img.style.marginLeft = '600px';  
+    var interval = setInterval(moveRight,50);
+  
 };
