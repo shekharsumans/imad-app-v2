@@ -5,7 +5,7 @@ elemnt.innerHTML = 'suman shekhar';
 //move the image
 var img = document.getElementById('abc4');
 var marginLeft = 0;
-function moverRight() {
+function moveRight() {
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
 }
