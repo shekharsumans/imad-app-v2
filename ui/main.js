@@ -6,7 +6,7 @@ elemnt.innerHTML = 'suman shekhar';
 var img = document.getElementById('abc4');
 var marginLeft = 0;
 function moveRight() {
-    marginLeft = marginLeft + 1;
+    marginLeft = marginLeft + 5;
     img.style.marginLeft = marginLeft + 'px';
 }
 
